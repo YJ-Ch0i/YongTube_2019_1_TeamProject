@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>YongTube_Project</display-name>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <context-param>
+  	<param-name>admin_id</param-name>
+  	<param-value>admin</param-value>
+  </context-param>
+  <context-param>
+  	<param-name>admin_pass</param-name>
+  	<param-value>cs1234</param-value>
+  </context-param>
+  
+  <servlet>
+  	<servlet-name>userFront</servlet-name>
+  	<servlet-class>user.userController.FrontController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>userFront</servlet-name>
+  	<url-pattern>*.us</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>videoFront</servlet-name>
+  	<servlet-class>video.videoController.FrontController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>videoFront</servlet-name>
+  	<url-pattern>*.vd</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>adminFront</servlet-name>
+  	<servlet-class>adminController.FrontController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>adminFront</servlet-name>
+  	<url-pattern>*.ad</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>playlistFront</servlet-name>
+  	<servlet-class>playlist.playlistController.FrontController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>playlistFront</servlet-name>
+  	<url-pattern>*.pl</url-pattern>
+  </servlet-mapping>
+</web-app>
